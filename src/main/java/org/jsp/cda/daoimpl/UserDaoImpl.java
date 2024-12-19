@@ -50,5 +50,12 @@ private UserRepositery repositary;
 		return Optional.empty();
 	}
 
+
+	@Override
+	public Optional<User> findUserByEmail(String email) {
+	
+		return repositary.findUserByEmail(email);
+	}
+
 	
 }
