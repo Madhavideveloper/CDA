@@ -12,6 +12,7 @@ public interface UserService {
 	ResponseEntity<?> findById(int id);
 	ResponseEntity<?> findAllUser();
 	ResponseEntity<?> verifyOTP(int id, int otp);
+	ResponseEntity<?> findUserByEmail(String email);
 
 	
 

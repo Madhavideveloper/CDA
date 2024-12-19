@@ -12,6 +12,7 @@ public interface UserDao {
 	Optional<User> findById(int id);
 	List<User> findAllUser();
 	Optional<User> verifyOTP(int id, int otp);
+	Optional<User> findUserByEmail(String email);
 
 
 

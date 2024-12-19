@@ -40,8 +40,14 @@ private UserService service;
 	public ResponseEntity<?> findAllUser(){
 		return service.findAllUser();
 	}
+	@Operation(summary="This API will get otp data",description="we will get the  otp user data")
 	@PatchMapping("/{id}/otp/{otp}")
 	public ResponseEntity<?> verifyOTP(@PathVariable int id,@PathVariable int otp){
 		return service.verifyOTP(id,otp);
+	}
+	@Operation(summary="This API will find all user data through email",description="we will get all the user data")
+	@GetMapping("/email/{email}")
+	public ResponseEntity<?> findUserByEmail(@PathVariable String email){
+		return service.findUserByEmail(email);
 	}
 }
